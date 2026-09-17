@@ -1,0 +1,18 @@
+@{
+    ViewData["Title"] = "Início";
+}
+
+<div class="text-center py-5">
+    <h1 class="display-5">Sistema de Gestão de Consultas UVV</h1>
+    <p class="lead">Cadastre-se, faça login e gerencie suas consultas de forma simples e segura.</p>
+
+    @if (!(User.Identity?.IsAuthenticated ?? false))
+    {
+        <a class="btn btn-primary btn-lg me-2" asp-controller="Conta" asp-action="Registro">Criar conta</a>
+        <a class="btn btn-outline-secondary btn-lg" asp-controller="Conta" asp-action="Login">Entrar</a>
+    }
+    else
+    {
+        <a class="btn btn-primary btn-lg" asp-controller="Consultas" asp-action="Index">Ver minhas consultas</a>
+    }
+</div>
