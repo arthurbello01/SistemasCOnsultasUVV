@@ -1,3 +1,28 @@
+## Configuração do banco de dados
+
+> **Atenção:** os arquivos do projeto estão dentro da subpasta `SistemaConsultasUVV/`. Entre nela antes de rodar os comandos abaixo:
+> ```bash
+> cd SistemaConsultasUVV
+> ```
+
+1. Restaure os pacotes do projeto:
+```bash
+   dotnet restore
+```
+...
+
+## Executando a aplicação
+
+```bash
+dotnet run
+```
+> **Importante:** o código-fonte está dentro da subpasta `SistemaConsultasUVV/`. Rode `cd SistemaConsultasUVV` antes dos comandos abaixo.
+
+cd SistemaConsultasUVV
+dotnet restore
+dotnet ef database update
+dotnet run
+
 # Sistema de Gestão de Consultas UVV
 
 Trabalho prático da disciplina **Desenvolvimento Web Back-end** (UVV).
